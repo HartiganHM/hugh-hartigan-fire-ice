@@ -12,6 +12,8 @@ describe('housesReducer tests', () => {
   it('Should return a new store with housesData', () => {
     const expected = mockHousesData;
 
-    expect(housesData(undefined, actions.setHousesDataInStore(mockHousesData))).toEqual(expected)
+    expect(
+      housesData(undefined, actions.setHousesDataInStore(mockHousesData))
+    ).toEqual(expected);
   });
 });
