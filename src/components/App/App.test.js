@@ -4,7 +4,8 @@ import { shallow } from 'enzyme';
 
 describe('App tests', () => {
   it('Should match the snapshot', () => {
-    const renderedApp = shallow(<App/>)
-    expect(renderedApp).toBeDefined
-  })
-})
+    const mockGetHousesData = jest.fn();
+    const renderedApp = shallow(<App getHousesData={mockGetHousesData} />);
+    expect(renderedApp).toBeDefined;
+  });
+});
