@@ -8,4 +8,4 @@ const housesReducer = (state = [], action) => {
 };
 
 
-export default housesReducer
+export default housesReducer;
