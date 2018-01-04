@@ -40,7 +40,7 @@ class Card extends Component {
     ));
 
     const listOfMembers = swornMembers.map((member, index) => (
-      <div key={index}>Sworn Member: {member}</div>
+      <div className='members' key={index}>Sworn Member: {member}</div>
     ));
 
     return (
