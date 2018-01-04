@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 
-class CardContainer extends Component {
+export class CardContainer extends Component {
   render() {
     return (
       <div className='CardContainer'>
@@ -13,4 +13,10 @@ class CardContainer extends Component {
   }
 }
 
-export default CardContainer;
+export const mapStateToProps = store => {
+  return {
+    housesData: store.housesData
+  }
+}
+
+export default connect(mapStateToProps, null)(CardContainer);
