@@ -1,11 +1,11 @@
 const fetchSwornMembers = async arrayOfMembers => {
     debugger
     const fetchMembers = arrayOfMembers.map(async member => {
+      let postBody = { url: member }
+      console.log(postBody)
       const fetchPerson = await fetch('http://localhost:3001/api/v1/character', {
         method: 'POST',
-        body: JSON.stringify({
-          url: member
-        }),
+        body: JSON.stringify(postBody),
         headers: {
           'Content-Type': 'application/json'
         }
