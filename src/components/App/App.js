@@ -6,7 +6,7 @@ import CardContainer from '../CardContainer/CardContainer';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     this.props.getHousesData();
   }
