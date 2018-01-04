@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import fetchHouseData from './fetchHousesData';
 import mockHousesData from '../../data/mockHousesData';
 
