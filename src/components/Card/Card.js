@@ -9,7 +9,8 @@ class Card extends Component {
     return (
       <div className='Card'>
         <h2>{name}</h2>
-        <span>Founded: {founded || 'N/A'}</span>
+        <div>Founded: {founded || 'N/A'}</div>
+        <div>Words {words || 'N/A'}</div>
         {listOfTitles}
         <div>Coat of Arms: {coatOfArms}</div>
       </div>
