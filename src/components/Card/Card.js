@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const Card = () => {
-  return (
-    <div className='Card'>
-      I am an CARDDDDD
-    </div>
-  )
+class Card extends Component {
+  render () {
+    const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words } = props.houseData;
+
+    return (
+      <div className='Card'>
+        {name}
+      </div>
+    )
+  }
 }
 
 export default Card;
