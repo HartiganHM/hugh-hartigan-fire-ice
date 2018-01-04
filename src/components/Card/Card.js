@@ -15,7 +15,7 @@ class Card extends Component {
       swornMembers
     } = this.props.houseData;
 
-    const arrayOfMembers = fetchSwornMembers(swornMembers);
+    // const arrayOfMembers = fetchSwornMembers(swornMembers);
 
     const listOfTitles = titles.map((title, index) => (
       <div key={index}>Title: {title}</div>
