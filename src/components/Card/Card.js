@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import fetchSwornMembers from '../../helpers/fetchSwornMembers/fetchSwornMembers';
 
 class Card extends Component {
   render() {
@@ -13,6 +14,8 @@ class Card extends Component {
       words,
       swornMembers
     } = this.props.houseData;
+
+    const arrayOfMembers = fetchSwornMembers(swornMembers);
 
     const listOfTitles = titles.map((title, index) => (
       <div key={index}>Title: {title}</div>

@@ -1,15 +1,16 @@
-const fetchSwornMembers = arrayOfMembers => {
+const fetchSwornMembers = async arrayOfMembers => {
+    debugger
     const fetchMembers = arrayOfMembers.map(async member => {
-      console.log(member)
       const fetchPerson = await fetch('http://localhost:3001/api/v1/character', {
         method: 'POST',
-        body: {
-          url: JSON.stringify(member)
-        },
+        body: JSON.stringify({
+          url: member
+        }),
         headers: {
           'Content-Type': 'application/json'
         }
       });
+      console.log(fetchPerson)
       const jsonPerson = await fetchPerson.json();
 
       return jsonPerson
