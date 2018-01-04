@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import PropTypes, { shape, func, string } from 'prop-types';
-import logo from './logo.svg';
-import './App.css';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import PropTypes, { shape, func, string } from 'prop-types';
+import CardContainer from '../CardContainer/CardContainer';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
   componentDidMount() {
