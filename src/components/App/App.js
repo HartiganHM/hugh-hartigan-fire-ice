@@ -26,19 +26,13 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = store => {
-  return {
-    houses: store.houses
-  };
-};
-
 const mapDispatchToProps = dispatch => {
   return {
     getHousesData: () => dispatch(actions.populateHouseData())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
 
 App.propTypes = {
 
