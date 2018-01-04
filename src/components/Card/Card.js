@@ -11,6 +11,7 @@ class Card extends Component {
         <h2>{name}</h2>
         <span>Founded: {founded || 'N/A'}</span>
         {listOfTitles}
+        <div>Coat of Arms: {coatOfArms}</div>
       </div>
     )
   }
