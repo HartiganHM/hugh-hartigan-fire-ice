@@ -6,7 +6,7 @@ describe('App tests', () => {
   it('Should match the snapshot', () => {
     const mockGetHousesData = jest.fn();
     const renderedApp = shallow(<App getHousesData={mockGetHousesData} />);
-    expect(renderedApp).toBeDefined;
+    expect(renderedApp).toMatchSnapshot();
   });
 
   describe('mapDispatchToProps tests', () => {
