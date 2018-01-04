@@ -32,11 +32,6 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  fake: shape({ fake: string }),
-  fakeAction: func.isRequired
-};
-
 const mapStateToProps = store => {
   return {
     houses: store.houses
@@ -50,3 +45,8 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+App.propTypes = {
+  fake: shape({ fake: string }),
+  fakeAction: func.isRequired
+};
