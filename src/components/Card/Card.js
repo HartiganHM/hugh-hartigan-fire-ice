@@ -13,13 +13,17 @@ class Card extends Component {
       words
     } = this.props.houseData;
 
-    const listOfTitles = titles.map(title => <div>Title: {title}</div>);
-
-    const listOfWeapons = ancestralWeapons.map(weapon => (
-      <div>Weapon: {weapon}</div>
+    const listOfTitles = titles.map((title, index) => (
+      <div key={index}>Title: {title}</div>
     ));
 
-    const listOfSeats = seats.map(seat => <div>Seat: {seat}</div>);
+    const listOfWeapons = ancestralWeapons.map((weapon, index) => (
+      <div key={index}>Weapon: {weapon}</div>
+    ));
+
+    const listOfSeats = seats.map((seat, index) => (
+      <div key={index}>Seat: {seat}</div>
+    ));
 
     return (
       <div className="Card">
