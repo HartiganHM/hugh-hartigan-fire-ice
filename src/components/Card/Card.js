@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import fetchSwornMembers from '../../helpers/fetchSwornMembers/fetchSwornMembers';
 
 class Card extends Component {
+  componentDidMount() {
+    fetchSwornMembers(this.props.houseData.swornMembers)
+  }
+
   render() {
     const {
       name,
@@ -10,7 +15,8 @@ class Card extends Component {
       titles,
       coatOfArms,
       ancestralWeapons,
-      words
+      words,
+      swornMembers
     } = this.props.houseData;
 
     const listOfTitles = titles.map((title, index) => (
