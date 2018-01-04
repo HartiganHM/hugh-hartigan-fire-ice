@@ -1,4 +1,4 @@
-import { App, mapStateToProps, mapDispatchToProps } from './App';
+import { App, mapDispatchToProps } from './App';
 import React from 'react';
 import { shallow } from 'enzyme';
 
@@ -11,7 +11,11 @@ describe('App tests', () => {
 
   describe('mapDispatchToProps tests', () => {
     it('Should call dispatch when getHousesData is called', () => {
+      const mockDispatch = jest.fn();
+      const result = mapDispatchToProps(mockDispatch);
 
+      result.getHousesData();
+      expect(mockDispatch).toHaveBeenCalled();
     });
   });
 });
