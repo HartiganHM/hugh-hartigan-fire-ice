@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import '../App/App.css'
 
 class Card extends Component {
-  toggleClass = () => {
-    console.log('click')
+  toggleClass = (display) => {
+    return display = true;
   }
 
   render() {
@@ -35,8 +35,10 @@ class Card extends Component {
       <div key={index}>Sworn Member: {member}</div>
     ));
 
+    let display = false;
+
     return (
-      <div className="Card" onClick={() => this.toggleClass}>
+      <div className="Card" onClick={(display) => this.toggleClass(display)}>
         <h2>{name}</h2>
         <div>Founded: {founded || 'N/A'}</div>
         <div>Words {words || 'N/A'}</div>
@@ -44,7 +46,7 @@ class Card extends Component {
         {listOfSeats}
         <div>Coat of Arms: {coatOfArms}</div>
         {listOfWeapons}
-        <div className="hidden">{listOfMembers}</div>
+        <div>{display && listOfMembers}</div>
       </div>
     );
   }
