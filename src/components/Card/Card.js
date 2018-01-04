@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Card extends Component {
   render () {
-    const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words } = props.houseData;
+    const { name, founded, seats, titles, coatOfArms, ancestralWeapons, words } = this.props.houseData;
 
     return (
       <div className='Card'>
