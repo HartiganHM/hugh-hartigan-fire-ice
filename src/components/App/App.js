@@ -7,7 +7,7 @@ import * as actions from '../../actions';
 
 class App extends Component {
   componentDidMount() {
-    
+    this.props.getHouseData();
   }
 
   render() {
