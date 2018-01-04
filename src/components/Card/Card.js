@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import fetchSwornMembers from '../../helpers/fetchSwornMembers/fetchSwornMembers';
 
 class Card extends Component {
-  componentDidMount() {
-    fetchSwornMembers(this.props.houseData.swornMembers)
-  }
-
   render() {
     const {
       name,

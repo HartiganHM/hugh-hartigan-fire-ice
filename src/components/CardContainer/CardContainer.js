@@ -8,6 +8,7 @@ import '../App/App.css';
 export class CardContainer extends Component {
   render() {
     const { housesData } = this.props;
+
     const cards = housesData.map((house, index) => (
       <Card key={index} houseData={house} />
     ));
