@@ -2,7 +2,6 @@ import Card from './Card';
 import React from 'react';
 import { shallow } from 'enzyme';
 import mockHousesData from '../../data/mockHousesData';
-import { read } from 'fs';
 
 describe('Card tests', () => {
   it('Card should match the snapshot', () => {
@@ -26,6 +25,6 @@ describe('Card tests', () => {
     const expected = mockHouseData.swornMembers.length;
 
     renderedCard.simulate('click');
-    expect(renderedCard.find('.members').length).toEqual(8);
+    expect(renderedCard.find('.members').length).toEqual(expected);
   });
 });

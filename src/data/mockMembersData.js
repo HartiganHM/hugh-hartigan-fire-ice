@@ -1,3 +1,1 @@
-export default [
-  'Tom', 'Bill', 'Craigmoore'
-]
+export default ['Tom', 'Bill', 'Craigmoore'];

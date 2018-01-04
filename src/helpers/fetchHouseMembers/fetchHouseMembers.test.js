@@ -1,10 +1,10 @@
-/*esling-disable*/
+/*eslint-disable*/
 import fetchHouseMembers from './fetchHouseMembers';
 import mockMembersData from '../../data/mockMembersData';
 
 window.fetch = jest.fn().mockImplementation(() =>
   Promise.resolve({
-    status.200,
+    status: 200,
     json: () => Promise.resolve(mockMembersData)
   })
 )
