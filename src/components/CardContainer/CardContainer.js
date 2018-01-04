@@ -12,7 +12,7 @@ export class CardContainer extends Component {
     const loadingImage = <img id='wolf' src={require('./wolf.gif')} />
     return (
       <div className='CardContainer'>
-        {cards}
+        {housesData.length ? cards : loadingImage}
       </div>
     )
   }
