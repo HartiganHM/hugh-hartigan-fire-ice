@@ -8,6 +8,6 @@ describe('CardContainer tests', () => {
     const mockHousesData = housesData;
     const renderedCardContainer = shallow(<CardContainer housesData={mockHousesData}/>);
 
-    expect(renderedCardContainer).toBeDefined
+    expect(renderedCardContainer).toMatchSnapshot();
   })
 })
