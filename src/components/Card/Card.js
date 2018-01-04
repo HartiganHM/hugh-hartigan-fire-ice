@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../App/App.css'
+import '../App/App.css';
 
 class Card extends Component {
   constructor() {
     super();
     this.state = {
       display: false
-    }
+    };
   }
 
   toggleClass = () => {
     const display = this.state.display === false ? true : false;
-    this.setState({display})
-  }
+    this.setState({ display });
+  };
 
   render() {
     const {

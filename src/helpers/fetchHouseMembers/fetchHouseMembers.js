@@ -11,14 +11,14 @@ const fetchHouseMembers = arrayOfHouses => {
       const jsonMember = await newMember.json();
 
       return jsonMember.name;
-    })
+    });
 
     const swornMembers = await Promise.all(unresolvedPromises);
 
-    return {...house, swornMembers};
-  })
+    return { ...house, swornMembers };
+  });
 
-  return Promise.all(newHouses)
-}
+  return Promise.all(newHouses);
+};
 
 export default fetchHouseMembers;
