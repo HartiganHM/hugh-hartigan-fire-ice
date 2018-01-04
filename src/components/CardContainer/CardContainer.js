@@ -11,7 +11,7 @@ export class CardContainer extends Component {
     const cards = housesData.map((house) => (<Card houseData={house}/>));
     const loadingImage = <img id='wolf' src={require('./wolf.gif')} />
     return (
-      <div className='CardContainer'>
+      <div className='Container'>
         {housesData.length ? cards : loadingImage}
       </div>
     )
