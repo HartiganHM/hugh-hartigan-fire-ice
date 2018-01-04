@@ -36,3 +36,7 @@ class Card extends Component {
 }
 
 export default Card;
+
+Card.propTypes = {
+  houseData: PropTypes.object
+};
