@@ -7,8 +7,8 @@ describe('actions tests', () => {
     const expected = {
       type: 'SET_HOUSES_DATA',
       housesData
-    }
+    };
 
     expect(actions.setHousesDataInStore(housesData)).toEqual(expected);
   });
-})
+});
