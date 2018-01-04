@@ -7,22 +7,26 @@ import { fakeAction } from '../../actions';
 
 class App extends Component {
   componentDidMount() {
-    console.log('hi')
+    console.log('hi');
   }
 
   render() {
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Westeros</h2>
-          <button onClick={() => {
-            this.props.fakeAction();
-            alert(this.props.fake);
-          }}> FAKE ACTION</button>
+          <button
+            onClick={() => {
+              this.props.fakeAction();
+              alert(this.props.fake);
+            }}
+          >
+            {' '}
+            FAKE ACTION
+          </button>
         </div>
-        <div className='Display-info'>
-        </div>
+        <div className="Display-info" />
       </div>
     );
   }
@@ -34,10 +38,15 @@ App.propTypes = {
 };
 
 const mapStateToProps = store => {
-  houses: store.houses
-}
+  return {
+    houses: store.houses
+  };
+};
 
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
-});
+const mapDispatchToProps = dispatch => {
+  return {
+    getHouseData: () => dispatch(actions.populateHouseData())
+  };
+};
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
