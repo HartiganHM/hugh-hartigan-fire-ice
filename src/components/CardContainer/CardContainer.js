@@ -7,7 +7,7 @@ export class CardContainer extends Component {
   render() {
     return (
       <div className='CardContainer'>
-        I'm a CardContainer!
+        <img src={require('./wolf.gif')} />
       </div>
     )
   }
