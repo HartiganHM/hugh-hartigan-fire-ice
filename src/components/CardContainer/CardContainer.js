@@ -7,10 +7,12 @@ import '../App/App.css'
 
 export class CardContainer extends Component {
   render() {
+    const { housesData } = this.props;
+    const cards = housesData.map((house) => (<Card houseData={house}/>));
+    const loadingImage = <img id='wolf' src={require('./wolf.gif')} />
     return (
       <div className='CardContainer'>
-        <img id='wolf' src={require('./wolf.gif')} />
-        <Card />
+        {cards}
       </div>
     )
   }
