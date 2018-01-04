@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import fetchSwornMembers from '../../helpers/fetchSwornMembers/fetchSwornMembers';
 
 class Card extends Component {
   render() {
@@ -15,8 +14,6 @@ class Card extends Component {
       swornMembers
     } = this.props.houseData;
 
-    // const arrayOfMembers = fetchSwornMembers(swornMembers);
-
     const listOfTitles = titles.map((title, index) => (
       <div key={index}>Title: {title}</div>
     ));
@@ -29,6 +26,10 @@ class Card extends Component {
       <div key={index}>Seat: {seat}</div>
     ));
 
+    const listOfMembers = swornMembers.map((member, index) => {
+      <div>{member}</div>
+    });
+
     return (
       <div className="Card">
         <h2>{name}</h2>
@@ -38,6 +39,7 @@ class Card extends Component {
         {listOfSeats}
         <div>Coat of Arms: {coatOfArms}</div>
         {listOfWeapons}
+        {listOfMembers}
       </div>
     );
   }
