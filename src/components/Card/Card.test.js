@@ -10,4 +10,21 @@ describe('Card tests', () => {
 
     expect(renderedCard).toMatchSnapshot();
   });
+
+  it('Card should not display sworn members by default', () => {
+    const mockHouseData = mockHousesData[0];
+    const renderedCard = shallow(<Card houseData={mockHouseData} />);
+    const expected = 0;
+
+    expect(renderedCard.find('.members').length).toEqual(expected);
+  });
+
+  it('Card should display a list of members on click', () => {
+    const mockHouseData = mockHousesData[0];
+    const renderedCard = shallow(<Card houseData={mockHouseData} />);
+    const expected = mockHouseData.swornMembers.length;
+
+    renderedCard.simulate('click');
+    expect(renderedCard.find('.members').length).toEqual(expected);
+  });
 });

@@ -92,8 +92,10 @@ ShallowWrapper {
             Lady Forlorn
 </div>,
         ],
+        <div />,
       ],
       "className": "Card",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -144,7 +146,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -161,7 +163,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "1",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -178,7 +180,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -212,7 +214,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "0",
         "nodeType": "host",
         "props": Object {
           "children": Array [
@@ -225,6 +227,17 @@ ShallowWrapper {
           "Weapon: ",
           "Lady Forlorn",
         ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": false,
+        },
+        "ref": null,
+        "rendered": false,
         "type": "div",
       },
     ],
@@ -274,8 +287,10 @@ ShallowWrapper {
               Lady Forlorn
 </div>,
           ],
+          <div />,
         ],
         "className": "Card",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -326,7 +341,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -343,7 +358,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "1",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -360,7 +375,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -394,7 +409,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "0",
           "nodeType": "host",
           "props": Object {
             "children": Array [
@@ -407,6 +422,17 @@ ShallowWrapper {
             "Weapon: ",
             "Lady Forlorn",
           ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": false,
+          },
+          "ref": null,
+          "rendered": false,
           "type": "div",
         },
       ],
